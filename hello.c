@@ -1,8 +1,7 @@
 #include <stdio.h>
 int main() 
 {
- printf("Hello, World!\n");
- printf("SKIBIDI \n johnny chan ");
- printf("ไอแพททิกเป็นเก \n ");
+ printf("สวัสดีครับ ผม สิรธีร์ สุนทรภูติวงศ์ \n รหัสนักศึกษา: 692110172 \n วิชา: DG111 Computer Programming");
+
  return 0;
 }
