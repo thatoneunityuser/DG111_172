@@ -1,6 +1,6 @@
 # DG111 — Siratee Suntornputiwong
 **รหัสนักศึกษา:** 692110172
-**อาจารย์:** M Sensei
+**อาจารย์:** NOPPON WONGTA
 ## วิธี Build และ Run
 ```bash
 gcc hello.c -o hello
