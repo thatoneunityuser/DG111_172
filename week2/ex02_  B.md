@@ -1,0 +1,13 @@
+BEGIN [EXCERCISE B]
+
+INPUT A,B
+
+IF A > B THEN value "PRINT A"
+
+ELSE value "PRINT B"
+
+END IF
+
+OUTPUT  value
+
+END
