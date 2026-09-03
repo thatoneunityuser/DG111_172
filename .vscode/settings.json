@@ -1,4 +1,4 @@
-﻿{
+{
     "terminal.integrated.profiles.windows": {
         "MSYS2 MinGW64": {
             "path": "powershell.exe",
@@ -16,5 +16,12 @@
     },
     "files.encoding": "utf8",
     "editor.formatOnSave": true,
-    "C_Cpp.default.cStandard": "c99"
+    "C_Cpp.default.cStandard": "c99",
+    "clangd.arguments": [
+        "--query-driver=C:/msys64/ucrt64/bin/gcc.exe,C:/msys64/mingw64/bin/gcc.exe"
+    ],
+    "clangd.fallbackFlags": [
+        "-IC:/msys64/ucrt64/include",
+        "-IC:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include"
+    ]
 }
