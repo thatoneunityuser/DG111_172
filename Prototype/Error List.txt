@@ -1,0 +1,7 @@
+"Syntax Error XXX",Compile Error
+"1+1=-1",Logic Error
+" mom mom look at that airplane ",Horror_Error
+"Zeeeeed AHHHHHH",Freaky Error
+"Stack Overflow",Runtime Error
+"Null Pointer",Fatal Error
+"porjai I love you",None
