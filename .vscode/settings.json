@@ -1,15 +1,16 @@
 {
     "terminal.integrated.profiles.windows": {
-        "MSYS2 MinGW64": {
+        "MSYS2 UCRT64": {
             "path": "powershell.exe",
             "args": [
                 "-NoExit",
                 "-Command",
-                "& 'C:\\msys64\\msys2_shell.cmd' -mingw64 -defterm -no-start -here"
+                "& 'C:\\msys64\\msys2_shell.cmd' -ucrt64 -defterm -no-start -here"
             ],
             "icon": "terminal-powershell"
         }
     },
+    "terminal.integrated.defaultProfile.windows": "MSYS2 UCRT64",
     "files.associations": {
         "*.h": "c",
         "*.c": "c"
