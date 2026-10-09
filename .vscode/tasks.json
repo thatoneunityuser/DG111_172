@@ -10,7 +10,15 @@
                 "-g",
                 "${fileBasename}",
                 "-o",
-                "${fileBasenameNoExtension}.exe"
+                "${fileBasenameNoExtension}.exe",
+                "-I",
+                "C:/msys64/ucrt64/include",
+                "-L",
+                "C:/msys64/ucrt64/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
             ],
             "options": {
                 "cwd": "${fileDirname}",
@@ -36,7 +44,15 @@
                 "-g",
                 "${fileBasename}",
                 "-o",
-                "${fileBasenameNoExtension}.exe"
+                "${fileBasenameNoExtension}.exe",
+                "-I",
+                "C:/msys64/ucrt64/include",
+                "-L",
+                "C:/msys64/ucrt64/lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
             ],
             "options": {
                 "cwd": "${fileDirname}",
@@ -49,7 +65,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
             "detail": "Standard build task for active file using MSYS2 UCRT64 GCC."
         },
@@ -85,7 +101,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "detail": "คอมไพล์โปรแกรมภาษา C ร่วมกับ Library Raylib 5.0 (สำหรับเกม/กราฟิก)"
         }
