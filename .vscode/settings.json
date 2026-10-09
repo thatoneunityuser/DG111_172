@@ -1,5 +1,14 @@
-﻿{
+{
     "terminal.integrated.profiles.windows": {
+        "MSYS2 UCRT64": {
+            "path": "powershell.exe",
+            "args": [
+                "-NoExit",
+                "-Command",
+                "& 'C:\\msys64\\msys2_shell.cmd' -ucrt64 -defterm -no-start -here"
+            ],
+            "icon": "terminal-powershell"
+        },
         "MSYS2 MinGW64": {
             "path": "powershell.exe",
             "args": [
@@ -16,5 +25,8 @@
     },
     "files.encoding": "utf8",
     "editor.formatOnSave": true,
-    "C_Cpp.default.cStandard": "c99"
+    "C_Cpp.default.cStandard": "c99",
+    "files.exclude": {
+        "**/.vscode/extensions": true
+    }
 }

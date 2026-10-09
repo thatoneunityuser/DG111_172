@@ -47,22 +47,22 @@ TextForAnomalyError textAnomaly;
 CorrectCode textNormal;
 
 void initGameTexts() {
-    // Compile Errors (syntax errors)
+    // Compile Errors
     sprintf(textCompile.Error1, "int main() {\n    printf(\"Syntax Error XXX\")\n    return 0;\n}");
     sprintf(textCompile.Error2, "int main() {\n    int x = ;\n    return 0;\n}");
     sprintf(textCompile.Error3, "void test() {\n    return 100;\n}");
 
-    // Logic Errors (runs, but logic is wrong)
+    // Logic Errors
     sprintf(textLogic.Error1, "int calculate() {\n    // Expected: 1 + 1 = 2\n    return 1 + 1 == -1;\n}");
     sprintf(textLogic.Error2, "int count = 0;\nfor (int i = 0; i < 10; i--) {\n    count++;\n}");
     sprintf(textLogic.Error3, "int isEven(int n) {\n    if (n %% 2 == 1) return 1;\n    return 0;\n}");
 
-    // Anomaly Errors (horror / glitch / weird errors)
+    // Anomaly Errors
     sprintf(textAnomaly.Error1, "void observe() {\n    printf(\" mom mom look at that airplane \");\n}");
     sprintf(textAnomaly.Error2, "void scream() {\n    printf(\"Zeeeeed AHHHHHH\");\n}");
     sprintf(textAnomaly.Error3, "void secret() {\n    char *msg = \"ฌฟัหดหทหหดหดหดหดหดหดหดหดหดหดหดหดหดหดหดหดหด\";\n    // Anomaly warning: unauthorized heartbeats detected\n}");
 
-    // Correct Code (clean code)
+    // Correct Code
     sprintf(textNormal.normaltext, "int main() {\n    printf(\"Hello World!\\n\");\n    return 0;\n}");
     sprintf(textNormal.normaltext2, "int add(int a, int b) {\n    return a + b;\n}");
     sprintf(textNormal.normaltext3, "int max(int a, int b) {\n    return (a > b) ? a : b;\n}");
@@ -93,7 +93,6 @@ const char* getDisplayText(ErrorEnum errorKind) {
 
 ErrorTypes RandomErrorAndErrorText(int round) {
     ErrorTypes errorType;
-    // 0 = CompileError, 1 = LogicError, 2 = Anomaly_Image, 3 = none (no error)
     int randomChoice = rand() % 4;
     errorType.error = (ErrorEnum)randomChoice;
 
@@ -133,7 +132,6 @@ void GamePlaySection(int round, int *incorrect_count, int *correct_count) {
 
     printf("Is it error? (y/n): ");
     char answer;
-    // Space before %c skips any whitespace/newline left in buffer
     scanf(" %c", &answer);
 
     checking(errorType, answer, correct_count, incorrect_count);
@@ -141,10 +139,9 @@ void GamePlaySection(int round, int *incorrect_count, int *correct_count) {
     printf("Round: %d | Correct: %d/10 | Incorrect: %d/3\n", round, *correct_count, *incorrect_count);
     printf("\nPress any key for the next round...\n");
     getch();
-}// this is the main gameplay
+}
 
 int main() {
-    // Seed random once at game start
     srand((unsigned int)time(NULL));
     initGameTexts();
 
@@ -162,7 +159,6 @@ int main() {
         return 0;
     }
 
-    // Main game loop: continue until 10 correct or 3 incorrect
     while (correct_count < 10 && incorrect_count < 3) {
         round = NextRound(round);
         GamePlaySection(round, &incorrect_count, &correct_count);
