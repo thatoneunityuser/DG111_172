@@ -4,7 +4,7 @@ int main(void) {
     // 1. ตั้งค่าหน้าต่าง
     const int screenWidth = 1920;
     const int screenHeight = 1080;
-    InitWindow(screenWidth, screenHeight, "raylib - Draw Texture");
+    InitWindow(screenWidth, screenHeight, "Just PWIE");
 
     SetTargetFPS(60);
 
@@ -27,7 +27,7 @@ int main(void) {
             // 3. วาดรูปลงบนพิกัด X, Y
             // วาดที่ตำแหน่ง (100, 100) สีปกติคือ WHITE
             DrawTexture(myTexture, 900, 100, WHITE);
-            DrawText("PWIE :D", 900, 600, 300, RED);
+            DrawText("PWIE :D", 900, 400, 50, RED);
 
         EndDrawing();
     }
